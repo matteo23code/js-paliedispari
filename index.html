@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+     // Chiedere all’utente di inserire una parola
+    var utente = prompt('inserisci una parola');
+     // Creare una funzione per capire se la parola inserita è palindroma
+     function palindrome(utente) {
+       var rovesciata = '';
+       for (var i = utente.length-1 ; i >= 0 ; i--) {
+         console.log(utente[i]);
+         rovesciata += utente[i];
+         console.log(rovesciata);
+       }
+       return rovesciata;
+    }
+    var rovesciata = palindrome(utente);
+    if (utente == rovesciata) {
+      alert('la parola è una palindroma')
+    }else {
+      alert('la parola non è palindroma')
+    }
+    </script>
+  </body>
+</html>

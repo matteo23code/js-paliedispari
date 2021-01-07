@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script type="text/javascript">
+    // chiedo all'utente cosa scegliere tra pari o dispari e di inserire un numero da 1 a 5.
+    var sceltaUtente = prompt('Pari o Dispari ?');
+    var numeroUtente = prompt('Scegli un numero da 1 a 5!');
+
+    var min = 1;
+    var max = 5;
+
+    function sceltaComputer(min, max){
+      var result = Math.floor(Math.random() * (max + 1 - min) + min)
+      return result;
+    }
+
+    function ispari(numero){
+      numero = parseInt(numero);
+      if (numero % 2 === 0) {
+        return true;
+      }else {
+        return false;
+      }
+    }
+    if (ispari(numeroUtente)) {
+      console.log('è pari');
+    }else {
+      console.log('è dispari');
+    }
+
+    console.log(numeroUtente + sceltaComputer(min, max));
+
+    </script>
+  </body>
+</html>
